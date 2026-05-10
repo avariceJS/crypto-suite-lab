@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Исходный файл client/include/logindialog.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('logindialog_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">logindialog.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="logindialog_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QDialog&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span>QLineEdit;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span>QSpinBox;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepd_1_1client.html">pd::client</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_login_dialog.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="classpd_1_1client_1_1_login_dialog.html#a8b0286ee7c2237c335256650bb2de9b5">LoginDialog</a> : <span class="keyword">public</span> QDialog {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Q_OBJECT</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classpd_1_1client_1_1_login_dialog.html#a8b0286ee7c2237c335256650bb2de9b5">LoginDialog</a>(QWidget* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classpd_1_1client_1_1_login_dialog.html#af4f11c37b8504c8a79e4d259286b41de">doLogin</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classpd_1_1client_1_1_login_dialog.html#a5befe1a6f5734631d17037856f02d823">doRegister</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_login_dialog.html#a1115e258480d761d5809aea112d6e95f">   22</a></span>    QLineEdit *<a class="code hl_variable" href="classpd_1_1client_1_1_login_dialog.html#a1115e258480d761d5809aea112d6e95f">host_</a>, *<a class="code hl_variable" href="classpd_1_1client_1_1_login_dialog.html#ab982a7e775e0fc1d5256177c2bcdfb95">login_</a>, *<a class="code hl_variable" href="classpd_1_1client_1_1_login_dialog.html#a4ea5517a9d880ed8be929b6d5db9c71a">pwd_</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_login_dialog.html#aeaf1f8608606e47a16656e6c3a3939d3">   23</a></span>    QSpinBox  *<a class="code hl_variable" href="classpd_1_1client_1_1_login_dialog.html#aeaf1f8608606e47a16656e6c3a3939d3">port_</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1client_1_1_login_dialog.html#ac8aa9c6eadc111efb6cc0904c06c3576">ensureConnected</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace</span></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_a1115e258480d761d5809aea112d6e95f"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#a1115e258480d761d5809aea112d6e95f">pd::client::LoginDialog::host_</a></div><div class="ttdeci">QLineEdit * host_</div><div class="ttdef"><b>Определения</b> logindialog.h:22</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_a4ea5517a9d880ed8be929b6d5db9c71a"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#a4ea5517a9d880ed8be929b6d5db9c71a">pd::client::LoginDialog::pwd_</a></div><div class="ttdeci">QLineEdit * pwd_</div><div class="ttdef"><b>Определения</b> logindialog.h:22</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_a5befe1a6f5734631d17037856f02d823"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#a5befe1a6f5734631d17037856f02d823">pd::client::LoginDialog::doRegister</a></div><div class="ttdeci">void doRegister()</div><div class="ttdef"><b>Определения</b> logindialog.cpp:67</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_a8b0286ee7c2237c335256650bb2de9b5"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#a8b0286ee7c2237c335256650bb2de9b5">pd::client::LoginDialog::LoginDialog</a></div><div class="ttdeci">LoginDialog(QWidget *parent=nullptr)</div><div class="ttdef"><b>Определения</b> logindialog.cpp:14</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_ab982a7e775e0fc1d5256177c2bcdfb95"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#ab982a7e775e0fc1d5256177c2bcdfb95">pd::client::LoginDialog::login_</a></div><div class="ttdeci">QLineEdit * login_</div><div class="ttdef"><b>Определения</b> logindialog.h:22</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_ac8aa9c6eadc111efb6cc0904c06c3576"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#ac8aa9c6eadc111efb6cc0904c06c3576">pd::client::LoginDialog::ensureConnected</a></div><div class="ttdeci">bool ensureConnected()</div><div class="ttdef"><b>Определения</b> logindialog.cpp:44</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_aeaf1f8608606e47a16656e6c3a3939d3"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#aeaf1f8608606e47a16656e6c3a3939d3">pd::client::LoginDialog::port_</a></div><div class="ttdeci">QSpinBox * port_</div><div class="ttdef"><b>Определения</b> logindialog.h:23</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_login_dialog_html_af4f11c37b8504c8a79e4d259286b41de"><div class="ttname"><a href="classpd_1_1client_1_1_login_dialog.html#af4f11c37b8504c8a79e4d259286b41de">pd::client::LoginDialog::doLogin</a></div><div class="ttdeci">void doLogin()</div><div class="ttdef"><b>Определения</b> logindialog.cpp:58</div></div>
+<div class="ttc" id="anamespacepd_1_1client_html"><div class="ttname"><a href="namespacepd_1_1client.html">pd::client</a></div><div class="ttdef"><b>Определения</b> clientcore.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a href="logindialog_8h.html">logindialog.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

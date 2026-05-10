@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Исходный файл server/include/protocol.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('protocol_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">protocol.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="protocol_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QJsonObject&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacepd_1_1proto.html">   24</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepd_1_1proto.html">pd::proto</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>QByteArray <a class="code hl_function" href="namespacepd_1_1proto.html#a32245245618bfb3ea3c15265021e767e">pack</a>(<span class="keyword">const</span> QJsonObject&amp; o);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>QJsonObject <a class="code hl_function" href="namespacepd_1_1proto.html#a418a6e99e472432466bda86d653d52f4">unpack</a>(<span class="keyword">const</span> QByteArray&amp; line, <span class="keywordtype">bool</span>* <a class="code hl_function" href="namespacepd_1_1proto.html#a7d52c34f0cdf93e5066ef614b3fcdc92">ok</a> = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>QJsonObject <a class="code hl_function" href="namespacepd_1_1proto.html#a199c2b88d5eff1fb91748a777ce058a8">error</a>(<span class="keyword">const</span> QString&amp; msg);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>QJsonObject <a class="code hl_function" href="namespacepd_1_1proto.html#a7d52c34f0cdf93e5066ef614b3fcdc92">ok</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace</span></div>
+</div>
+<div class="ttc" id="anamespacepd_1_1proto_html"><div class="ttname"><a href="namespacepd_1_1proto.html">pd::proto</a></div><div class="ttdef"><b>Определения</b> protocol.h:24</div></div>
+<div class="ttc" id="anamespacepd_1_1proto_html_a199c2b88d5eff1fb91748a777ce058a8"><div class="ttname"><a href="namespacepd_1_1proto.html#a199c2b88d5eff1fb91748a777ce058a8">pd::proto::error</a></div><div class="ttdeci">QJsonObject error(const QString &amp;msg)</div><div class="ttdef"><b>Определения</b> protocol.cpp:17</div></div>
+<div class="ttc" id="anamespacepd_1_1proto_html_a32245245618bfb3ea3c15265021e767e"><div class="ttname"><a href="namespacepd_1_1proto.html#a32245245618bfb3ea3c15265021e767e">pd::proto::pack</a></div><div class="ttdeci">QByteArray pack(const QJsonObject &amp;o)</div><div class="ttdef"><b>Определения</b> protocol.cpp:6</div></div>
+<div class="ttc" id="anamespacepd_1_1proto_html_a418a6e99e472432466bda86d653d52f4"><div class="ttname"><a href="namespacepd_1_1proto.html#a418a6e99e472432466bda86d653d52f4">pd::proto::unpack</a></div><div class="ttdeci">QJsonObject unpack(const QByteArray &amp;line, bool *ok=nullptr)</div><div class="ttdef"><b>Определения</b> protocol.cpp:10</div></div>
+<div class="ttc" id="anamespacepd_1_1proto_html_a7d52c34f0cdf93e5066ef614b3fcdc92"><div class="ttname"><a href="namespacepd_1_1proto.html#a7d52c34f0cdf93e5066ef614b3fcdc92">pd::proto::ok</a></div><div class="ttdeci">QJsonObject ok()</div><div class="ttdef"><b>Определения</b> protocol.cpp:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a href="dir_2b32f7736d6a65027d17676f6279053c.html">include</a></li><li class="navelem"><a href="protocol_8h.html">protocol.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

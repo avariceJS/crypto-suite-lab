@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: PD Project — Crypto Suite (Vigenère + SHA‑384 + Chord Method + Steganography)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">PD Project — Crypto Suite (Vigenère + SHA‑384 + Chord Method + Steganography) </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<p>Учебный курсовой проект на <b>C++ / Qt 6</b>: клиент-серверное приложение, реализующее четыре алгоритма (шифр Виженера, хеш SHA‑384, метод хорд для нахождения корня уравнения, LSB-стеганография — внедрение сообщения в картинку), с авторизацией, ролями (user/admin), БД (SQLite, синглтон), несколькими клиентами и Docker-инфраструктурой.</p>
+<p><img src="docs/uml/architecture.svg" alt="architecture" style="pointer-events: none;" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Возможности</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">№  </th><th class="markdownTableHeadNone">Функция  </th><th class="markdownTableHeadNone">Где используется  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">Шифр Виженера (encrypt/decrypt)  </td><td class="markdownTableBodyNone">клиент ↔ сервер  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">SHA-384 (hash сообщения / хеш паролей)  </td><td class="markdownTableBodyNone">сервер (auth) + клиент  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3  </td><td class="markdownTableBodyNone">Метод хорд — численное решение уравнений  </td><td class="markdownTableBodyNone">клиент (UI ввода f(x))  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">LSB-стеганография — скрытие сообщения в PNG  </td><td class="markdownTableBodyNone">клиент  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">Авторизация / регистрация  </td><td class="markdownTableBodyNone">сервер  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">6  </td><td class="markdownTableBodyNone">Роли user / admin  </td><td class="markdownTableBodyNone">сервер + клиент  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">7  </td><td class="markdownTableBodyNone">Админ-функции (список пользователей, блокировка)  </td><td class="markdownTableBodyNone">сервер + клиент  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8  </td><td class="markdownTableBodyNone">Логи операций в таблице  </td><td class="markdownTableBodyNone">клиент  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Структура репозитория</h1>
+<div class="fragment"><div class="line">pd/</div>
+<div class="line">├── core/         — общая библиотека алгоритмов (Vigenere, SHA384, Chord, Steg)</div>
+<div class="line">├── server/       — Qt TCP-сервер + SQLite (singleton)</div>
+<div class="line">├── client/       — Qt Widgets GUI (singleton)</div>
+<div class="line">├── tests/        — UnitTest (QtTest)</div>
+<div class="line">├── docs/</div>
+<div class="line">│   ├── wiki/     — страницы для GitHub Wiki</div>
+<div class="line">│   ├── uml/      — диаграммы (PlantUML + PNG)</div>
+<div class="line">│   ├── requirements.md</div>
+<div class="line">│   └── testing/  — тест-план, чек-лист, тест-кейсы, дефекты (CSV/XLS)</div>
+<div class="line">├── docker-compose.yml</div>
+<div class="line">├── Doxyfile</div>
+<div class="line">└── CMakeLists.txt</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Ветки git</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Ветка  </th><th class="markdownTableHeadNone">Назначение  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="server_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></span>  </td><td class="markdownTableBodyNone">стабильный релиз  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">develop</span>  </td><td class="markdownTableBodyNone">основная разработка  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">feature/core-algorithms</span>  </td><td class="markdownTableBodyNone">алгоритмы шифрования/хеширования  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">feature/server</span>  </td><td class="markdownTableBodyNone">TCP-сервер и БД  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">feature/client</span>  </td><td class="markdownTableBodyNone">GUI-клиент  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">feature/docker</span>  </td><td class="markdownTableBodyNone">контейнеризация  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">feature/tests</span>  </td><td class="markdownTableBodyNone">модульные тесты  </td></tr>
+</table>
+<p>Создание веток: <span class="tt">bash scripts/setup_branches.sh</span></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Запуск</h1>
+<p>Нужны <b>CMake ≥ 3.16</b>, компилятор с <b>C++17</b>, <b>Qt 6</b> с модулями: <br  />
+ <span class="tt">Core</span>, <span class="tt">Network</span>, <span class="tt">Sql</span>, <span class="tt">Widgets</span>, <span class="tt">Gui</span>, <span class="tt">Test</span> (модуль Test — только для юнит-тестов).</p>
+<p>Склонируйте репозиторий и перейдите в каталог проекта:</p>
+<div class="fragment"><div class="line">git clone https://github.com/avariceJS/crypto-suite-lab.git</div>
+<div class="line">cd crypto-suite-lab</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+macOS (Homebrew)</h2>
+<div class="fragment"><div class="line">brew install qt cmake</div>
+<div class="line">export CMAKE_PREFIX_PATH=&quot;$(brew --prefix qt)&quot;</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build -j</div>
+</div><!-- fragment --><p>При проблемах с поиском Qt CMake сообщит об ошибке <span class="tt">find_package(Qt6)</span> — проверьте, что <span class="tt">CMAKE_PREFIX_PATH</span> указывает на префикс Homebrew Qt.</p>
+<p>Запуск (два терминала):</p>
+<div class="fragment"><div class="line"># терминал 1 — сервер (оставить окно открытым)</div>
+<div class="line">./build/server/pd_server --port 5555 --db pd_server.db</div>
+<div class="line"> </div>
+<div class="line"># терминал 2 — клиент</div>
+<div class="line">./build/client/pd_client</div>
+</div><!-- fragment --><p>В диалоге входа: хост <span class="tt">127.0.0.1</span>, порт <span class="tt">5555</span>. Учётная запись администратора по умолчанию после первого старта сервера: <b>admin / admin</b>.</p>
+<p>Проверка, что сервер слушает порт:</p>
+<div class="fragment"><div class="line">lsof -nP -iTCP:5555 -sTCP:LISTEN</div>
+</div><!-- fragment --><p>Юнит-тесты:</p>
+<div class="fragment"><div class="line">ctest --test-dir build/tests --output-on-failure</div>
+</div><!-- fragment --><p>Если GUI клиента не находит плагины Qt, можно задать (обычно достаточно автоматического поиска в коде сервера под Homebrew):</p>
+<div class="fragment"><div class="line">export QT_PLUGIN_PATH=&quot;$(brew --prefix qt)/share/qt/plugins&quot;</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Linux (пример: Ubuntu / Debian)</h2>
+<div class="fragment"><div class="line">sudo apt update</div>
+<div class="line">sudo apt install cmake build-essential qt6-base-dev</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build -j</div>
+</div><!-- fragment --><p>Если сервер не открывает SQLite (ошибка драйвера QSQLITE), установите пакет с плагином SQL для Qt 6 — имя зависит от дистрибутива (ищите в репозитории по запросам <span class="tt">qt6</span> и <span class="tt">sqlite</span>).</p>
+<p>Если <span class="tt">find_package(Qt6)</span> не находит Qt, укажите префикс явно (путь зависит от дистрибутива), например:</p>
+<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6</div>
+</div><!-- fragment --><p>Запуск сервера и клиента — те же команды <span class="tt">./build/server/pd_server ...</span> и <span class="tt">./build/client/pd_client</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Windows</h2>
+<p>Установите <b>Qt 6</b> (Qt Online Installer) и <b>CMake</b>, откройте <b>x64 Native Tools</b> (или среду с компилятором MSVC/MinGW).</p>
+<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=C:\Qt\6.x.x\msvc2019_64</div>
+<div class="line">cmake --build build --config Release</div>
+<div class="line">build\Release\pd_server.exe --port 5555 --db pd_server.db</div>
+<div class="line">build\Release\pd_client.exe</div>
+</div><!-- fragment --><p>Точный путь к <span class="tt">CMAKE_PREFIX_PATH</span> возьмите из каталога установки Qt (папка, где лежит <span class="tt">lib/cmake/Qt6</span>).</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Docker</h2>
+<p>Сборка и запуск через контейнеры (см. <span class="tt">docker-compose.yml</span>):</p>
+<div class="fragment"><div class="line">docker compose up --build</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Сборка (кратко)</h1>
+<p>Локально, если Qt уже виден CMake:</p>
+<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build -j</div>
+<div class="line">ctest --test-dir build/tests --output-on-failure</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Документация</h1>
+<ul>
+<li><b>Doxygen</b>: HTML <b>не лежит в репозитории</b> (каталог <span class="tt">docs/doxygen/</span> в <span class="tt">.gitignore</span>). Его нужно <b>сгенерировать у себя</b>: установите <a href="https://www.doxygen.nl/">Doxygen</a>, в корне проекта выполните <span class="tt">doxygen Doxyfile</span>, затем откройте в браузере файл <b><span class="tt">docs/doxygen/html/index.html</span></b> (через Finder: двойной щелчок или «Открыть с помощью → браузер»).</li>
+<li><b>Wiki (исходники в репозитории)</b>: каталог <span class="tt">docs/wiki/</span> (<span class="tt">Home.md</span> и остальные страницы)</li>
+<li><b>Требования</b>: <span class="tt">docs/requirements.md</span></li>
+<li><b>UML</b>: <span class="tt">docs/uml/</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Как выложить эту Wiki на вкладку GitHub «Wiki»</h2>
+<p>Файлы из <span class="tt">docs/wiki/</span> <b>не появляются на сайте сами по себе</b>: у репозитория есть <b>отдельный git-репозиторий Wiki</b> (<span class="tt">…git</span> с суффиксом <span class="tt">.wiki</span>).</p>
+<ol type="1">
+<li>На GitHub откройте <b>Wiki</b> → <b>Create the first page</b>, сохраните любую черновую главную страницу (или минимальный текст) — так включается Wiki и создаётся репозиторий для неё.</li>
+<li><p class="startli">На своём компьютере:</p>
+<div class="fragment"><div class="line">cd ~/Desktop   # или любой удобный каталог</div>
+<div class="line">git clone https://github.com/avariceJS/crypto-suite-lab.wiki.git</div>
+<div class="line">cd crypto-suite-lab.wiki</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Скопируйте в эту папку все файлы из основного проекта <span class="tt">docs/wiki/</span> (если проект уже клонирован рядом):</p>
+<div class="fragment"><div class="line">cp ../crypto-suite-lab/docs/wiki/*.md .</div>
+</div><!-- fragment --><p class="startli">Либо укажите полный путь к каталогу <span class="tt">docs/wiki/</span> на вашей машине.</p>
+</li>
+<li>Проверьте ссылки в <span class="tt">Home.md</span>: на GitHub Wiki обычно используют вид <b><span class="tt">[Архитектура](Architecture)</span></b> без суффикса <span class="tt">.md</span> (страница называется как файл <span class="tt">Architecture.md</span>).</li>
+<li><p class="startli">Картинки: путь вида <span class="tt">../uml/architecture.png</span> в Wiki-репозитории <b>не сработает</b>. Замените на абсолютную ссылку на файл в основном репозитории, например:</p>
+<p class="startli"><span class="tt"><a href="https://raw.githubusercontent.com/avariceJS/crypto-suite-lab/main/docs/uml/architecture.svg">https://raw.githubusercontent.com/avariceJS/crypto-suite-lab/main/docs/uml/architecture.svg</a></span></p>
+</li>
+<li><p class="startli">Зафиксируйте и отправьте:</p>
+<div class="fragment"><div class="line">git add .</div>
+<div class="line">git commit -m &quot;Import wiki pages from docs/wiki&quot;</div>
+<div class="line">git push</div>
+</div><!-- fragment --></li>
+</ol>
+<p>После <span class="tt">git push</span> страницы появятся на вкладке <b>Wiki</b>. Имеет смысл по-прежнему хранить копии в <span class="tt">docs/wiki/</span> в основном репозитории — это версионирование вместе с кодом; при изменениях повторяйте копирование или работайте сразу в клоне <span class="tt">.wiki.git</span> и переносите правки обратно при желании.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Лицензия</h1>
+<p>MIT </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

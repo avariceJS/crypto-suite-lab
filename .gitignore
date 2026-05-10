@@ -17,5 +17,4 @@ qrc_*.cpp
 .vscode/
 *.db
 *.sqlite
-docs/doxygen/
 .DS_Store

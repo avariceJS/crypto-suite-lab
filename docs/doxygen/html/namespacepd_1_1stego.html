@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Пространство имен pd::stego</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacepd_1_1stego.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Пространство имен pd::stego</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5f01b23b97398b6b7d4b179e4eb9e8c7" id="r_a5f01b23b97398b6b7d4b179e4eb9e8c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5f01b23b97398b6b7d4b179e4eb9e8c7">embed</a> (std::vector&lt; uint8_t &gt; &amp;pixels, const std::string &amp;msg)</td></tr>
+<tr class="memdesc:a5f01b23b97398b6b7d4b179e4eb9e8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Встроить сообщение в массив байтов изображения.  <br /></td></tr>
+<tr class="memitem:aadca2ff38a5efbaff28f7fd4d833967b" id="r_aadca2ff38a5efbaff28f7fd4d833967b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aadca2ff38a5efbaff28f7fd4d833967b">extract</a> (const std::vector&lt; uint8_t &gt; &amp;pixels)</td></tr>
+<tr class="memdesc:aadca2ff38a5efbaff28f7fd4d833967b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Извлечь сообщение, ранее встроенное <a class="el" href="#a5f01b23b97398b6b7d4b179e4eb9e8c7" title="Встроить сообщение в массив байтов изображения.">embed()</a>.  <br /></td></tr>
+<tr class="memitem:affff60132eb566f6b4c1a2d6531d1819" id="r_affff60132eb566f6b4c1a2d6531d1819"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#affff60132eb566f6b4c1a2d6531d1819">capacity</a> (size_t pixelsBytes)</td></tr>
+<tr class="memdesc:affff60132eb566f6b4c1a2d6531d1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальная длина сообщения для буфера <code class="param">capacityBytes</code> (в байтах).  <br /></td></tr>
+<tr class="memitem:aa13899dd4ef5fad92a463604cb40f805" id="r_aa13899dd4ef5fad92a463604cb40f805"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa13899dd4ef5fad92a463604cb40f805">writeBit</a> (std::vector&lt; uint8_t &gt; &amp;p, size_t idx, int bit)</td></tr>
+<tr class="memitem:a4b7f0d4dc6589488ce7b84a680252ceb" id="r_a4b7f0d4dc6589488ce7b84a680252ceb"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a4b7f0d4dc6589488ce7b84a680252ceb">readBit</a> (const std::vector&lt; uint8_t &gt; &amp;p, size_t idx)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="affff60132eb566f6b4c1a2d6531d1819" name="affff60132eb566f6b4c1a2d6531d1819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affff60132eb566f6b4c1a2d6531d1819">&#9670;&#160;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t pd::stego::capacity </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pixelsBytes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Максимальная длина сообщения для буфера <code class="param">capacityBytes</code> (в байтах). </p>
+
+</div>
+</div>
+<a id="a5f01b23b97398b6b7d4b179e4eb9e8c7" name="a5f01b23b97398b6b7d4b179e4eb9e8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f01b23b97398b6b7d4b179e4eb9e8c7">&#9670;&#160;</a></span>embed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::stego::embed </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pixels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Встроить сообщение в массив байтов изображения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Изменяемый буфер байт пикселей. </td></tr>
+    <tr><td class="paramname">msg</td><td>Сообщение в UTF-8. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если ёмкости хватило. </dd></dl>
+
+</div>
+</div>
+<a id="aadca2ff38a5efbaff28f7fd4d833967b" name="aadca2ff38a5efbaff28f7fd4d833967b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadca2ff38a5efbaff28f7fd4d833967b">&#9670;&#160;</a></span>extract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string pd::stego::extract </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pixels</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Извлечь сообщение, ранее встроенное <a class="el" href="#a5f01b23b97398b6b7d4b179e4eb9e8c7" title="Встроить сообщение в массив байтов изображения.">embed()</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Буфер байтов изображения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>извлечённое сообщение или пустую строку при ошибке. </dd></dl>
+
+</div>
+</div>
+<a id="a4b7f0d4dc6589488ce7b84a680252ceb" name="a4b7f0d4dc6589488ce7b84a680252ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7f0d4dc6589488ce7b84a680252ceb">&#9670;&#160;</a></span>readBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pd::stego::readBit </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa13899dd4ef5fad92a463604cb40f805" name="aa13899dd4ef5fad92a463604cb40f805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13899dd4ef5fad92a463604cb40f805">&#9670;&#160;</a></span>writeBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pd::stego::writeBit </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bit</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacepd.html">pd</a></li><li class="navelem"><a href="namespacepd_1_1stego.html">stego</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

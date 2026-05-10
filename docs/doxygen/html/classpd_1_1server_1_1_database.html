@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Класс pd::server::Database</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classpd_1_1server_1_1_database.html','','classpd_1_1server_1_1_database-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс pd::server::Database</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Singleton, обеспечивающий доступ к SQLite-БД сервера.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="database_8h_source.html">database.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:UserRow" id="r_UserRow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpd_1_1server_1_1_database_1_1_user_row.html">UserRow</a></td></tr>
+<tr class="memitem:LogRow" id="r_LogRow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpd_1_1server_1_1_database_1_1_log_row.html">LogRow</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af8ff2f6617d21fa83bec421bd9f0d47e" id="r_af8ff2f6617d21fa83bec421bd9f0d47e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> (const Database &amp;)=delete</td></tr>
+<tr class="memitem:afd7462cbaec2ceeb7dcdf4a1476645d2" id="r_afd7462cbaec2ceeb7dcdf4a1476645d2"><td class="memItemLeft"><a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afd7462cbaec2ceeb7dcdf4a1476645d2">operator=</a> (const <a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp;)=delete</td></tr>
+<tr class="memitem:a6fbefaf3e9e5d1eb91956c6505b637fe" id="r_a6fbefaf3e9e5d1eb91956c6505b637fe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6fbefaf3e9e5d1eb91956c6505b637fe">open</a> (const QString &amp;path)</td></tr>
+<tr class="memitem:af28862b79b9f416d9bb2adbe448063bc" id="r_af28862b79b9f416d9bb2adbe448063bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af28862b79b9f416d9bb2adbe448063bc">close</a> ()</td></tr>
+<tr class="memitem:a5f6443c34e376a5984bd756204026491" id="r_a5f6443c34e376a5984bd756204026491"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5f6443c34e376a5984bd756204026491">registerUser</a> (const QString &amp;login, const QString &amp;passwordHash, const QString &amp;role=&quot;user&quot;)</td></tr>
+<tr class="memitem:aa461478e425b28c750b53a3331bdf9f3" id="r_aa461478e425b28c750b53a3331bdf9f3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa461478e425b28c750b53a3331bdf9f3">authenticate</a> (const QString &amp;login, const QString &amp;passwordHash, QString *role, bool *blocked)</td></tr>
+<tr class="memitem:ac87fa0e4a5d3f16829fdec13df49fe28" id="r_ac87fa0e4a5d3f16829fdec13df49fe28"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac87fa0e4a5d3f16829fdec13df49fe28">setBlocked</a> (const QString &amp;login, bool blocked)</td></tr>
+<tr class="memitem:a243207a1b5f1bd69d285ba8f07ac2b5a" id="r_a243207a1b5f1bd69d285ba8f07ac2b5a"><td class="memItemLeft">QVector&lt; <a class="el" href="structpd_1_1server_1_1_database_1_1_user_row.html">UserRow</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a243207a1b5f1bd69d285ba8f07ac2b5a">listUsers</a> ()</td></tr>
+<tr class="memitem:aa27d93fa03e6aac77c6cf509ae0bd49d" id="r_aa27d93fa03e6aac77c6cf509ae0bd49d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa27d93fa03e6aac77c6cf509ae0bd49d">userExists</a> (const QString &amp;login)</td></tr>
+<tr class="memitem:a97994fe960399399b138a07b4008d950" id="r_a97994fe960399399b138a07b4008d950"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a97994fe960399399b138a07b4008d950">log</a> (const QString &amp;login, const QString &amp;action, const QString &amp;details={})</td></tr>
+<tr class="memitem:a3296390e3bb61dd3ab1417660efc7308" id="r_a3296390e3bb61dd3ab1417660efc7308"><td class="memItemLeft">QVector&lt; <a class="el" href="structpd_1_1server_1_1_database_1_1_log_row.html">LogRow</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3296390e3bb61dd3ab1417660efc7308">listLogs</a> (int limit=200)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a71ac3d0bc281800f969b3923472ec052" id="r_a71ac3d0bc281800f969b3923472ec052"><td class="memItemLeft">static <a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a71ac3d0bc281800f969b3923472ec052">instance</a> ()</td></tr>
+<tr class="memdesc:a71ac3d0bc281800f969b3923472ec052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить экземпляр (потокобезопасно).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a14a9ce4c00db587ad603ffece01f2321" id="r_a14a9ce4c00db587ad603ffece01f2321"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a14a9ce4c00db587ad603ffece01f2321">Database</a> ()</td></tr>
+<tr class="memitem:ae19b798a069d2ca5f2af480d65b7990b" id="r_ae19b798a069d2ca5f2af480d65b7990b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae19b798a069d2ca5f2af480d65b7990b">~Database</a> ()</td></tr>
+<tr class="memitem:a2b8e8e7c87291832b9c1b2bd1f4b4e07" id="r_a2b8e8e7c87291832b9c1b2bd1f4b4e07"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b8e8e7c87291832b9c1b2bd1f4b4e07">ensureSchema</a> ()</td></tr>
+<tr class="memitem:a7d08bc71e5c079ee987462cf40afe6c5" id="r_a7d08bc71e5c079ee987462cf40afe6c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d08bc71e5c079ee987462cf40afe6c5">seedAdmin</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a26a54be1d9e041f2e3c0b5b88a7ec7a1" id="r_a26a54be1d9e041f2e3c0b5b88a7ec7a1"><td class="memItemLeft">QSqlDatabase&#160;</td><td class="memItemRight"><a class="el" href="#a26a54be1d9e041f2e3c0b5b88a7ec7a1">db_</a></td></tr>
+<tr class="memitem:a67e0d1c283b000d0846617cdc660fde1" id="r_a67e0d1c283b000d0846617cdc660fde1"><td class="memItemLeft">QRecursiveMutex&#160;</td><td class="memItemRight"><a class="el" href="#a67e0d1c283b000d0846617cdc660fde1">mtx_</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Singleton, обеспечивающий доступ к SQLite-БД сервера. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="af8ff2f6617d21fa83bec421bd9f0d47e" name="af8ff2f6617d21fa83bec421bd9f0d47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ff2f6617d21fa83bec421bd9f0d47e">&#9670;&#160;</a></span>Database() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pd::server::Database::Database </td>
+          <td>(</td>
+          <td class="paramtype">const Database &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14a9ce4c00db587ad603ffece01f2321" name="a14a9ce4c00db587ad603ffece01f2321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a9ce4c00db587ad603ffece01f2321">&#9670;&#160;</a></span>Database() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pd::server::Database::Database </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae19b798a069d2ca5f2af480d65b7990b" name="ae19b798a069d2ca5f2af480d65b7990b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19b798a069d2ca5f2af480d65b7990b">&#9670;&#160;</a></span>~Database()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pd::server::Database::~Database </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa461478e425b28c750b53a3331bdf9f3" name="aa461478e425b28c750b53a3331bdf9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa461478e425b28c750b53a3331bdf9f3">&#9670;&#160;</a></span>authenticate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::server::Database::authenticate </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>login</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>passwordHash</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *</td>          <td class="paramname"><span class="paramname"><em>role</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *</td>          <td class="paramname"><span class="paramname"><em>blocked</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af28862b79b9f416d9bb2adbe448063bc" name="af28862b79b9f416d9bb2adbe448063bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af28862b79b9f416d9bb2adbe448063bc">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pd::server::Database::close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b8e8e7c87291832b9c1b2bd1f4b4e07" name="a2b8e8e7c87291832b9c1b2bd1f4b4e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8e8e7c87291832b9c1b2bd1f4b4e07">&#9670;&#160;</a></span>ensureSchema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pd::server::Database::ensureSchema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71ac3d0bc281800f969b3923472ec052" name="a71ac3d0bc281800f969b3923472ec052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ac3d0bc281800f969b3923472ec052">&#9670;&#160;</a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp; pd::server::Database::instance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить экземпляр (потокобезопасно). </p>
+
+</div>
+</div>
+<a id="a3296390e3bb61dd3ab1417660efc7308" name="a3296390e3bb61dd3ab1417660efc7308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3296390e3bb61dd3ab1417660efc7308">&#9670;&#160;</a></span>listLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; <a class="el" href="structpd_1_1server_1_1_database_1_1_log_row.html">Database::LogRow</a> &gt; pd::server::Database::listLogs </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">200</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a243207a1b5f1bd69d285ba8f07ac2b5a" name="a243207a1b5f1bd69d285ba8f07ac2b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243207a1b5f1bd69d285ba8f07ac2b5a">&#9670;&#160;</a></span>listUsers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; <a class="el" href="structpd_1_1server_1_1_database_1_1_user_row.html">Database::UserRow</a> &gt; pd::server::Database::listUsers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97994fe960399399b138a07b4008d950" name="a97994fe960399399b138a07b4008d950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97994fe960399399b138a07b4008d950">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pd::server::Database::log </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>login</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>details</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fbefaf3e9e5d1eb91956c6505b637fe" name="a6fbefaf3e9e5d1eb91956c6505b637fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbefaf3e9e5d1eb91956c6505b637fe">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::server::Database::open </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd7462cbaec2ceeb7dcdf4a1476645d2" name="afd7462cbaec2ceeb7dcdf4a1476645d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7462cbaec2ceeb7dcdf4a1476645d2">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp; pd::server::Database::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#af8ff2f6617d21fa83bec421bd9f0d47e">Database</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f6443c34e376a5984bd756204026491" name="a5f6443c34e376a5984bd756204026491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6443c34e376a5984bd756204026491">&#9670;&#160;</a></span>registerUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::server::Database::registerUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>login</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>passwordHash</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>role</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;user&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d08bc71e5c079ee987462cf40afe6c5" name="a7d08bc71e5c079ee987462cf40afe6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d08bc71e5c079ee987462cf40afe6c5">&#9670;&#160;</a></span>seedAdmin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pd::server::Database::seedAdmin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac87fa0e4a5d3f16829fdec13df49fe28" name="ac87fa0e4a5d3f16829fdec13df49fe28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87fa0e4a5d3f16829fdec13df49fe28">&#9670;&#160;</a></span>setBlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::server::Database::setBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>login</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>blocked</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa27d93fa03e6aac77c6cf509ae0bd49d" name="aa27d93fa03e6aac77c6cf509ae0bd49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27d93fa03e6aac77c6cf509ae0bd49d">&#9670;&#160;</a></span>userExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pd::server::Database::userExists </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>login</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a26a54be1d9e041f2e3c0b5b88a7ec7a1" name="a26a54be1d9e041f2e3c0b5b88a7ec7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a54be1d9e041f2e3c0b5b88a7ec7a1">&#9670;&#160;</a></span>db_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSqlDatabase pd::server::Database::db_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67e0d1c283b000d0846617cdc660fde1" name="a67e0d1c283b000d0846617cdc660fde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e0d1c283b000d0846617cdc660fde1">&#9670;&#160;</a></span>mtx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRecursiveMutex pd::server::Database::mtx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>server/include/<a class="el" href="database_8h_source.html">database.h</a></li>
+<li>server/src/<a class="el" href="database_8cpp.html">database.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacepd.html">pd</a></li><li class="navelem"><a href="namespacepd_1_1server.html">server</a></li><li class="navelem"><a href="classpd_1_1server_1_1_database.html">Database</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

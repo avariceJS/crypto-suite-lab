@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Исходный файл server/include/clienthandler.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('clienthandler_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clienthandler.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="clienthandler_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QJsonObject&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacepd_1_1server.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepd_1_1server.html">pd::server</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html">   19</a></span><span class="keyword">class </span><a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a07a70d4aee7985e7895c8e88345b6b40">ClientHandler</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Q_OBJECT</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a07a70d4aee7985e7895c8e88345b6b40">ClientHandler</a>(QTcpSocket* socket, QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>signals:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#a66b36e3fbad1e230575d09deb29ebf64">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classpd_1_1server_1_1_client_handler.html#a66b36e3fbad1e230575d09deb29ebf64">finished</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classpd_1_1server_1_1_client_handler.html#a9fb96688ca81c6a88218077ce79a6690">onReadyRead</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classpd_1_1server_1_1_client_handler.html#a87d9bc1cccf25e7a973c82ecc27ea891">onDisconnected</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a08c2f2152e5b4c4c3c5d702e99d3b65d">handleLine</a>(<span class="keyword">const</span> QByteArray&amp; line);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a511a0107991ff42cd00421c82105d3ff">dispatch</a>(<span class="keyword">const</span> QJsonObject&amp; req);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// command handlers</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a60e192a28076ac4ea3eb9c196d7f5f22">cmdRegister</a>(<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a69f85009b5dcb30600c153fd4851d0fc">cmdLogin</a>   (<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a0c5c7d520f2d4bc1b7c4477c97c23334">cmdVigenere</a>(<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a36e1a22681364a7b769857cd5976341c">cmdSha384</a>  (<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a41b484f2c804cea4c2f107c2ed7cd2f9">cmdChord</a>   (<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#aa63b57265afbc86c39b0085107847b2b">cmdStegCap</a> (<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#aed06acf131b8aecbc10a37f177382b1a">cmdListUsers</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a2b2bf6a32e8491b674e2483200a8a168">cmdSetBlock</a>(<span class="keyword">const</span> QJsonObject&amp;);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a34c9839167c6667e6ab414ba30b754df">cmdLogList</a> ();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    QJsonObject <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a3a1f15d00498a2f44a758ef84fb640b5">cmdPing</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#ab9a16bf21d371820a3c40d55c5f37f62">requireAuth</a>(QJsonObject&amp; err) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1server_1_1_client_handler.html#a0af8b90edea917abcf8b2fdff63b64af">requireAdmin</a>(QJsonObject&amp; err) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#af952831606aa5b1f2ab5505ae3f4b6c7">   50</a></span>    QTcpSocket* <a class="code hl_variable" href="classpd_1_1server_1_1_client_handler.html#af952831606aa5b1f2ab5505ae3f4b6c7">sock_</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#a93ce19e77007f85c2a55a2e3d052db4a">   51</a></span>    QByteArray  <a class="code hl_variable" href="classpd_1_1server_1_1_client_handler.html#a93ce19e77007f85c2a55a2e3d052db4a">buffer_</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#a10bcb9395106d204941d64823c6d85e1">   52</a></span>    QString     <a class="code hl_variable" href="classpd_1_1server_1_1_client_handler.html#a10bcb9395106d204941d64823c6d85e1">login_</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#a8a9679420ad72a6cf507830a246480f7">   53</a></span>    QString     <a class="code hl_variable" href="classpd_1_1server_1_1_client_handler.html#a8a9679420ad72a6cf507830a246480f7">role_</a>;     <span class="comment">// &quot;&quot;, &quot;user&quot;, &quot;admin&quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classpd_1_1server_1_1_client_handler.html#a34b06131f2a903eff5d08f42867a40cb">   54</a></span>    <span class="keywordtype">bool</span>        <a class="code hl_variable" href="classpd_1_1server_1_1_client_handler.html#a34b06131f2a903eff5d08f42867a40cb">authed_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace</span></div>
+</div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a07a70d4aee7985e7895c8e88345b6b40"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a07a70d4aee7985e7895c8e88345b6b40">pd::server::ClientHandler::ClientHandler</a></div><div class="ttdeci">ClientHandler(QTcpSocket *socket, QObject *parent=nullptr)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:17</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a08c2f2152e5b4c4c3c5d702e99d3b65d"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a08c2f2152e5b4c4c3c5d702e99d3b65d">pd::server::ClientHandler::handleLine</a></div><div class="ttdeci">void handleLine(const QByteArray &amp;line)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:42</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a0af8b90edea917abcf8b2fdff63b64af"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a0af8b90edea917abcf8b2fdff63b64af">pd::server::ClientHandler::requireAdmin</a></div><div class="ttdeci">bool requireAdmin(QJsonObject &amp;err) const</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:101</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a0c5c7d520f2d4bc1b7c4477c97c23334"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a0c5c7d520f2d4bc1b7c4477c97c23334">pd::server::ClientHandler::cmdVigenere</a></div><div class="ttdeci">QJsonObject cmdVigenere(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:107</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a10bcb9395106d204941d64823c6d85e1"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a10bcb9395106d204941d64823c6d85e1">pd::server::ClientHandler::login_</a></div><div class="ttdeci">QString login_</div><div class="ttdef"><b>Определения</b> clienthandler.h:52</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a2b2bf6a32e8491b674e2483200a8a168"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a2b2bf6a32e8491b674e2483200a8a168">pd::server::ClientHandler::cmdSetBlock</a></div><div class="ttdeci">QJsonObject cmdSetBlock(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:159</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a34b06131f2a903eff5d08f42867a40cb"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a34b06131f2a903eff5d08f42867a40cb">pd::server::ClientHandler::authed_</a></div><div class="ttdeci">bool authed_</div><div class="ttdef"><b>Определения</b> clienthandler.h:54</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a34c9839167c6667e6ab414ba30b754df"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a34c9839167c6667e6ab414ba30b754df">pd::server::ClientHandler::cmdLogList</a></div><div class="ttdeci">QJsonObject cmdLogList()</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:168</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a36e1a22681364a7b769857cd5976341c"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a36e1a22681364a7b769857cd5976341c">pd::server::ClientHandler::cmdSha384</a></div><div class="ttdeci">QJsonObject cmdSha384(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:122</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a3a1f15d00498a2f44a758ef84fb640b5"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a3a1f15d00498a2f44a758ef84fb640b5">pd::server::ClientHandler::cmdPing</a></div><div class="ttdeci">QJsonObject cmdPing()</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:67</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a41b484f2c804cea4c2f107c2ed7cd2f9"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a41b484f2c804cea4c2f107c2ed7cd2f9">pd::server::ClientHandler::cmdChord</a></div><div class="ttdeci">QJsonObject cmdChord(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:129</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a511a0107991ff42cd00421c82105d3ff"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a511a0107991ff42cd00421c82105d3ff">pd::server::ClientHandler::dispatch</a></div><div class="ttdeci">QJsonObject dispatch(const QJsonObject &amp;req)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:52</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a60e192a28076ac4ea3eb9c196d7f5f22"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a60e192a28076ac4ea3eb9c196d7f5f22">pd::server::ClientHandler::cmdRegister</a></div><div class="ttdeci">QJsonObject cmdRegister(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:69</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a66b36e3fbad1e230575d09deb29ebf64"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a66b36e3fbad1e230575d09deb29ebf64">pd::server::ClientHandler::finished</a></div><div class="ttdeci">void finished()</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a69f85009b5dcb30600c153fd4851d0fc"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a69f85009b5dcb30600c153fd4851d0fc">pd::server::ClientHandler::cmdLogin</a></div><div class="ttdeci">QJsonObject cmdLogin(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:80</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a87d9bc1cccf25e7a973c82ecc27ea891"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a87d9bc1cccf25e7a973c82ecc27ea891">pd::server::ClientHandler::onDisconnected</a></div><div class="ttdeci">void onDisconnected()</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:25</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a8a9679420ad72a6cf507830a246480f7"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a8a9679420ad72a6cf507830a246480f7">pd::server::ClientHandler::role_</a></div><div class="ttdeci">QString role_</div><div class="ttdef"><b>Определения</b> clienthandler.h:53</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a93ce19e77007f85c2a55a2e3d052db4a"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a93ce19e77007f85c2a55a2e3d052db4a">pd::server::ClientHandler::buffer_</a></div><div class="ttdeci">QByteArray buffer_</div><div class="ttdef"><b>Определения</b> clienthandler.h:51</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_a9fb96688ca81c6a88218077ce79a6690"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#a9fb96688ca81c6a88218077ce79a6690">pd::server::ClientHandler::onReadyRead</a></div><div class="ttdeci">void onReadyRead()</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:31</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_aa63b57265afbc86c39b0085107847b2b"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#aa63b57265afbc86c39b0085107847b2b">pd::server::ClientHandler::cmdStegCap</a></div><div class="ttdeci">QJsonObject cmdStegCap(const QJsonObject &amp;)</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:144</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_ab9a16bf21d371820a3c40d55c5f37f62"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#ab9a16bf21d371820a3c40d55c5f37f62">pd::server::ClientHandler::requireAuth</a></div><div class="ttdeci">bool requireAuth(QJsonObject &amp;err) const</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:97</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_aed06acf131b8aecbc10a37f177382b1a"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#aed06acf131b8aecbc10a37f177382b1a">pd::server::ClientHandler::cmdListUsers</a></div><div class="ttdeci">QJsonObject cmdListUsers()</div><div class="ttdef"><b>Определения</b> clienthandler.cpp:150</div></div>
+<div class="ttc" id="aclasspd_1_1server_1_1_client_handler_html_af952831606aa5b1f2ab5505ae3f4b6c7"><div class="ttname"><a href="classpd_1_1server_1_1_client_handler.html#af952831606aa5b1f2ab5505ae3f4b6c7">pd::server::ClientHandler::sock_</a></div><div class="ttdeci">QTcpSocket * sock_</div><div class="ttdef"><b>Определения</b> clienthandler.h:50</div></div>
+<div class="ttc" id="anamespacepd_1_1server_html"><div class="ttname"><a href="namespacepd_1_1server.html">pd::server</a></div><div class="ttdef"><b>Определения</b> clienthandler.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a href="dir_2b32f7736d6a65027d17676f6279053c.html">include</a></li><li class="navelem"><a href="clienthandler_8h.html">clienthandler.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

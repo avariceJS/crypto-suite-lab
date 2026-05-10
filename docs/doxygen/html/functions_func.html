@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Члены классов - Функции</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Список всех функций со ссылками на классы, к которым они относятся:</div><br/>
+<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="#index_~">~</a></div>
+
+
+<h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>authenticate()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#aa461478e425b28c750b53a3331bdf9f3">pd::server::Database</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>buildAdminTab()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a6e4f5e408f07cc10c54e1552696ae03b">pd::client::MainWindow</a></li>
+<li>buildChordTab()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a33f7e2a48cf2bd2ead46433b464d4dad">pd::client::MainWindow</a></li>
+<li>buildShaTab()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a844ab4a0b6d014465ff1766e0111e9f7">pd::client::MainWindow</a></li>
+<li>buildStegTab()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#ac121ba8c111090b4f09deaca5c37df70">pd::client::MainWindow</a></li>
+<li>buildVigenereTab()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a66e401527f67bd5bd0f0426c4a4f79eb">pd::client::MainWindow</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>chordCubicRoot()&#160;:&#160;<a class="el" href="class_core_tests.html#aa7ca748ff83db47ec1c6e0e78da9f0c8">CoreTests</a></li>
+<li>chordSameSignThrows()&#160;:&#160;<a class="el" href="class_core_tests.html#a517a4400f0dae50ff9d118981b7b09e3">CoreTests</a></li>
+<li>ClientCore()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">pd::client::ClientCore</a></li>
+<li>ClientHandler()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a07a70d4aee7985e7895c8e88345b6b40">pd::server::ClientHandler</a></li>
+<li>close()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#af28862b79b9f416d9bb2adbe448063bc">pd::server::Database</a></li>
+<li>cmdChord()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a41b484f2c804cea4c2f107c2ed7cd2f9">pd::server::ClientHandler</a></li>
+<li>cmdListUsers()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#aed06acf131b8aecbc10a37f177382b1a">pd::server::ClientHandler</a></li>
+<li>cmdLogin()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a69f85009b5dcb30600c153fd4851d0fc">pd::server::ClientHandler</a></li>
+<li>cmdLogList()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a34c9839167c6667e6ab414ba30b754df">pd::server::ClientHandler</a></li>
+<li>cmdPing()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a3a1f15d00498a2f44a758ef84fb640b5">pd::server::ClientHandler</a></li>
+<li>cmdRegister()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a60e192a28076ac4ea3eb9c196d7f5f22">pd::server::ClientHandler</a></li>
+<li>cmdSetBlock()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a2b2bf6a32e8491b674e2483200a8a168">pd::server::ClientHandler</a></li>
+<li>cmdSha384()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a36e1a22681364a7b769857cd5976341c">pd::server::ClientHandler</a></li>
+<li>cmdStegCap()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#aa63b57265afbc86c39b0085107847b2b">pd::server::ClientHandler</a></li>
+<li>cmdVigenere()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a0c5c7d520f2d4bc1b7c4477c97c23334">pd::server::ClientHandler</a></li>
+<li>connectionLost()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#ad3ab91514ddb082fbef71574ab09ddf0">pd::client::ClientCore</a></li>
+<li>connectTo()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a57cfa8d408d2b02a912b50e777ebec77">pd::client::ClientCore</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>Database()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#af8ff2f6617d21fa83bec421bd9f0d47e">pd::server::Database</a></li>
+<li>decrypt()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_vigenere.html#a83cf1ff649476620fba2b742b8dddc8f">pd::crypto::Vigenere</a></li>
+<li>digest()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#a1d63c2b3143eb74484cce32879af2291">pd::crypto::Sha384</a></li>
+<li>disconnectFromServer()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#af58c1c432b06dd0639da69b944eb5a13">pd::client::ClientCore</a></li>
+<li>dispatch()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a511a0107991ff42cd00421c82105d3ff">pd::server::ClientHandler</a></li>
+<li>doLogin()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_login_dialog.html#af4f11c37b8504c8a79e4d259286b41de">pd::client::LoginDialog</a></li>
+<li>doRegister()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_login_dialog.html#a5befe1a6f5734631d17037856f02d823">pd::client::LoginDialog</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>encrypt()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_vigenere.html#ae0503b12b2e7e4f263546e38a397acf0">pd::crypto::Vigenere</a></li>
+<li>ensureConnected()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_login_dialog.html#ac8aa9c6eadc111efb6cc0904c06c3576">pd::client::LoginDialog</a></li>
+<li>ensureSchema()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a2b8e8e7c87291832b9c1b2bd1f4b4e07">pd::server::Database</a></li>
+<li>exprParserBasic()&#160;:&#160;<a class="el" href="class_core_tests.html#ad6827a0476e4494bff4f432f55391dc8">CoreTests</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>finished()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a66b36e3fbad1e230575d09deb29ebf64">pd::server::ClientHandler</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>handleLine()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a08c2f2152e5b4c4c3c5d702e99d3b65d">pd::server::ClientHandler</a></li>
+<li>hash()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#ab18c8d262aba9d1754f83ce60f0ae2af">pd::crypto::Sha384</a></li>
+<li>hex()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#afdf5f7f7e301ff92a91e66f8c19b9a28">pd::crypto::Sha384</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>incomingConnection()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_server.html#a2e96d608b43de743c041df59889ab90d">pd::server::Server</a></li>
+<li>instance()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#aaf4cf47f4e4bba064367ff5bb5c9816c">pd::client::ClientCore</a>, <a class="el" href="classpd_1_1server_1_1_database.html#a71ac3d0bc281800f969b3923472ec052">pd::server::Database</a></li>
+<li>isAdmin()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#aaef4b8ecf66093f52089a5717c4b0824">pd::client::ClientCore</a></li>
+<li>isConnected()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a3b8894b0f0364d2fb86dd289d2a77214">pd::client::ClientCore</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>listLogs()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a3296390e3bb61dd3ab1417660efc7308">pd::server::Database</a></li>
+<li>listUsers()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a243207a1b5f1bd69d285ba8f07ac2b5a">pd::server::Database</a></li>
+<li>log()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a97994fe960399399b138a07b4008d950">pd::server::Database</a></li>
+<li>login()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#ac805eae6c763b500c568a080ab1bc1ee">pd::client::ClientCore</a></li>
+<li>loginChanged()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a9cf8e9424cc16edd04097f7f7c5002b2">pd::client::ClientCore</a></li>
+<li>LoginDialog()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_login_dialog.html#a8b0286ee7c2237c335256650bb2de9b5">pd::client::LoginDialog</a></li>
+<li>logout()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a5c6fb688e14439b3b33ddc3f054285fd">pd::client::ClientCore</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>MainWindow()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a9562daaeb334bc34b8b5457afe6c28b1">pd::client::MainWindow</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>onChordSolve()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a235bb478dc890e0d0a5d47e21387e0c3">pd::client::MainWindow</a></li>
+<li>onDisconnected()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a87d9bc1cccf25e7a973c82ecc27ea891">pd::server::ClientHandler</a></li>
+<li>onReadyRead()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a9fb96688ca81c6a88218077ce79a6690">pd::server::ClientHandler</a></li>
+<li>onSha384()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a94d76bbde9df6acbb057bbecca7588ac">pd::client::MainWindow</a></li>
+<li>onStegEmbed()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a0d79f5a22668aca0853a7e7778695796">pd::client::MainWindow</a></li>
+<li>onStegExtract()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a0d347b462a6d03e0ebb1d137a536fedc">pd::client::MainWindow</a></li>
+<li>onVigenereDec()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a66bdd7bb625dbef756fc3efacb7a4dd6">pd::client::MainWindow</a></li>
+<li>onVigenereEnc()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a0b68fd382c9947c0bc974d0ea0b67219">pd::client::MainWindow</a></li>
+<li>open()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a6fbefaf3e9e5d1eb91956c6505b637fe">pd::server::Database</a></li>
+<li>operator=()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#a9ba4c0f2305c49760288ce962c4df7af">pd::client::ClientCore</a>, <a class="el" href="classpd_1_1server_1_1_database.html#afd7462cbaec2ceeb7dcdf4a1476645d2">pd::server::Database</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>refreshLogs()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a3643e1ee476a36dac96fc4e1d5836b0c">pd::client::MainWindow</a></li>
+<li>refreshUsers()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#aef7331efd47365d6a763b1d5c8e2d0f8">pd::client::MainWindow</a></li>
+<li>registerUser()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#aea40e548714562bdf9ac3b4bd00c8ec4">pd::client::ClientCore</a>, <a class="el" href="classpd_1_1server_1_1_database.html#a5f6443c34e376a5984bd756204026491">pd::server::Database</a></li>
+<li>request()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#ae304b2ee9b9350de4179036cadfc5b5b">pd::client::ClientCore</a></li>
+<li>requireAdmin()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#a0af8b90edea917abcf8b2fdff63b64af">pd::server::ClientHandler</a></li>
+<li>requireAuth()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_client_handler.html#ab9a16bf21d371820a3c40d55c5f37f62">pd::server::ClientHandler</a></li>
+<li>role()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#adc6ffd6ee24ac78dd51199dda3ac94ed">pd::client::ClientCore</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>seedAdmin()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#a7d08bc71e5c079ee987462cf40afe6c5">pd::server::Database</a></li>
+<li>Server()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_server.html#a37254edbc9a01a59ea689d8bac093873">pd::server::Server</a></li>
+<li>setBlocked()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#ac87fa0e4a5d3f16829fdec13df49fe28">pd::server::Database</a></li>
+<li>Sha384()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#a12e35d786bc541c7694d975ab94d3e99">pd::crypto::Sha384</a></li>
+<li>sha384AbcVector()&#160;:&#160;<a class="el" href="class_core_tests.html#aac1960c073c39a5f00067e7eee2244b0">CoreTests</a></li>
+<li>sha384DifferentInputsDiffer()&#160;:&#160;<a class="el" href="class_core_tests.html#adb97f8d7e8c96eb781d6f3d3a5cc51d1">CoreTests</a></li>
+<li>sha384EmptyVector()&#160;:&#160;<a class="el" href="class_core_tests.html#ae2ffcdaf41035349387bc33924008d97">CoreTests</a></li>
+<li>socketErrorString()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_client_core.html#aa3abb58ea1e6967c6cdfc11fb7e3bf0a">pd::client::ClientCore</a></li>
+<li>start()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_server.html#aa7960dc14ec194c55faa63d1dee8f1b8">pd::server::Server</a></li>
+<li>stegCapacityMath()&#160;:&#160;<a class="el" href="class_core_tests.html#a73716438ff9ea006fc1d06038ba2cce0">CoreTests</a></li>
+<li>stegOverflowFails()&#160;:&#160;<a class="el" href="class_core_tests.html#ab8b91001c075818703bf47e80603017c">CoreTests</a></li>
+<li>stegRoundtripAscii()&#160;:&#160;<a class="el" href="class_core_tests.html#a84c5258837ee42f36132ff8a7a8e927d">CoreTests</a></li>
+<li>stegRoundtripUnicode()&#160;:&#160;<a class="el" href="class_core_tests.html#adeb94d3e8041ce024134a3de99a46f0b">CoreTests</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>toggleBlock()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a2f1c21cec1b505fed25e767b292a560e">pd::client::MainWindow</a></li>
+<li>transform()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#a66432225c5527dae87aa2e8d1da8c287">pd::crypto::Sha384</a>, <a class="el" href="classpd_1_1crypto_1_1_vigenere.html#aa4ddffe098d9111b93c5ada175f60f57">pd::crypto::Vigenere</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>update()&#160;:&#160;<a class="el" href="classpd_1_1crypto_1_1_sha384.html#a37e7ffa631dc810db2ac04da1182526f">pd::crypto::Sha384</a></li>
+<li>updateAdminVisibility()&#160;:&#160;<a class="el" href="classpd_1_1client_1_1_main_window.html#a89f3338106020255f50aa83fbe3849a1">pd::client::MainWindow</a></li>
+<li>userExists()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#aa27d93fa03e6aac77c6cf509ae0bd49d">pd::server::Database</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>vigenereEmptyKey()&#160;:&#160;<a class="el" href="class_core_tests.html#ab5b672b53bccd155734f401cfee00be2">CoreTests</a></li>
+<li>vigenereKnownVector()&#160;:&#160;<a class="el" href="class_core_tests.html#aa19128b2e6bf6d573ee65de36b3a9642">CoreTests</a></li>
+<li>vigenerePreservesNonLetters()&#160;:&#160;<a class="el" href="class_core_tests.html#a06191731658cf59d51148a32f80a0687">CoreTests</a></li>
+<li>vigenereRoundtripLatin()&#160;:&#160;<a class="el" href="class_core_tests.html#a344c950398df0aa5f23992106bd592a2">CoreTests</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
+<li>~Database()&#160;:&#160;<a class="el" href="classpd_1_1server_1_1_database.html#ae19b798a069d2ca5f2af480d65b7990b">pd::server::Database</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

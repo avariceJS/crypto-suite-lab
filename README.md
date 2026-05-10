@@ -142,7 +142,11 @@ ctest --test-dir build/tests --output-on-failure
 
 ## Документация
 
-- **Doxygen**: `doxygen Doxyfile` → `docs/doxygen/html/index.html`
+- **Doxygen** — из корня проекта:
+  ```bash
+  open docs/doxygen/html/index.html
+  ```
+  Сгенерировать заново: `doxygen Doxyfile`.
 - **Wiki (исходники в репозитории)**: каталог `docs/wiki/` (`Home.md` и остальные страницы)
 - **Требования**: `docs/requirements.md`
 - **UML**: `docs/uml/`

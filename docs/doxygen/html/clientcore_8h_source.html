@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Исходный файл client/include/clientcore.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('clientcore_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clientcore.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="clientcore_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QJsonObject&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QQueue&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacepd_1_1client.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepd_1_1client.html">pd::client</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Q_OBJECT</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a>&amp; <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#aaf4cf47f4e4bba064367ff5bb5c9816c">instance</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">   21</a></span>    <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a>(<span class="keyword">const</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a>&amp;)            = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#a9ba4c0f2305c49760288ce962c4df7af">   22</a></span>    <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a>&amp; <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a9ba4c0f2305c49760288ce962c4df7af">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">ClientCore</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a57cfa8d408d2b02a912b50e777ebec77">connectTo</a>(<span class="keyword">const</span> QString&amp; host, quint16 port, <span class="keywordtype">int</span> timeoutMs = 3000);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#af58c1c432b06dd0639da69b944eb5a13">disconnectFromServer</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a3b8894b0f0364d2fb86dd289d2a77214">isConnected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#aa3abb58ea1e6967c6cdfc11fb7e3bf0a">   28</a></span>    QString <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#aa3abb58ea1e6967c6cdfc11fb7e3bf0a">socketErrorString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#acaf842dd6a9874e818b29f42ee09c295">sock_</a>.errorString(); }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Synchronous request/response helper for simplicity.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    QJsonObject <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#ae304b2ee9b9350de4179036cadfc5b5b">request</a>(<span class="keyword">const</span> QJsonObject&amp; cmd, <span class="keywordtype">int</span> timeoutMs = 5000);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Auth state</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#ac805eae6c763b500c568a080ab1bc1ee">   34</a></span>    QString <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#ac805eae6c763b500c568a080ab1bc1ee">login</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#a72a8a4cfd7027a1ade3f1065b21b8c7c">login_</a>; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#adc6ffd6ee24ac78dd51199dda3ac94ed">   35</a></span>    QString <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#adc6ffd6ee24ac78dd51199dda3ac94ed">role</a> ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#ac9346675cb12dcbb475ccfbd9ef5dad8">role_</a>;  }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#aaef4b8ecf66093f52089a5717c4b0824">   36</a></span>    <span class="keywordtype">bool</span>    <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#aaef4b8ecf66093f52089a5717c4b0824">isAdmin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#ac9346675cb12dcbb475ccfbd9ef5dad8">role_</a> == <span class="stringliteral">&quot;admin&quot;</span>; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#ac805eae6c763b500c568a080ab1bc1ee">login</a>(<span class="keyword">const</span> QString&amp; user, <span class="keyword">const</span> QString&amp; password, QString* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#aea40e548714562bdf9ac3b4bd00c8ec4">registerUser</a>(<span class="keyword">const</span> QString&amp; user, <span class="keyword">const</span> QString&amp; password, QString* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#a5c6fb688e14439b3b33ddc3f054285fd">logout</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>signals:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#ad3ab91514ddb082fbef71574ab09ddf0">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classpd_1_1client_1_1_client_core.html#ad3ab91514ddb082fbef71574ab09ddf0">connectionLost</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#a9cf8e9424cc16edd04097f7f7c5002b2">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classpd_1_1client_1_1_client_core.html#a9cf8e9424cc16edd04097f7f7c5002b2">loginChanged</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="classpd_1_1client_1_1_client_core.html#afdccd70b6e4501c64325dff1e30adb97">ClientCore</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#acaf842dd6a9874e818b29f42ee09c295">   48</a></span>    QTcpSocket <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#acaf842dd6a9874e818b29f42ee09c295">sock_</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#a72a8a4cfd7027a1ade3f1065b21b8c7c">   49</a></span>    QString    <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#a72a8a4cfd7027a1ade3f1065b21b8c7c">login_</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#ac9346675cb12dcbb475ccfbd9ef5dad8">   50</a></span>    QString    <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#ac9346675cb12dcbb475ccfbd9ef5dad8">role_</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classpd_1_1client_1_1_client_core.html#a9089b0efa9d81c8848f29f095f2cefcb">   51</a></span>    <span class="keywordtype">int</span>        <a class="code hl_variable" href="classpd_1_1client_1_1_client_core.html#a9089b0efa9d81c8848f29f095f2cefcb">nextId_</a> = 1;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace</span></div>
+</div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a0f5f860ed9df29f19ba8ab796460482f"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a0f5f860ed9df29f19ba8ab796460482f">pd::client::ClientCore::ClientCore</a></div><div class="ttdeci">ClientCore(const ClientCore &amp;)=delete</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a3b8894b0f0364d2fb86dd289d2a77214"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a3b8894b0f0364d2fb86dd289d2a77214">pd::client::ClientCore::isConnected</a></div><div class="ttdeci">bool isConnected() const</div><div class="ttdef"><b>Определения</b> clientcore.cpp:23</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a57cfa8d408d2b02a912b50e777ebec77"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a57cfa8d408d2b02a912b50e777ebec77">pd::client::ClientCore::connectTo</a></div><div class="ttdeci">bool connectTo(const QString &amp;host, quint16 port, int timeoutMs=3000)</div><div class="ttdef"><b>Определения</b> clientcore.cpp:16</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a5c6fb688e14439b3b33ddc3f054285fd"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a5c6fb688e14439b3b33ddc3f054285fd">pd::client::ClientCore::logout</a></div><div class="ttdeci">void logout()</div><div class="ttdef"><b>Определения</b> clientcore.cpp:59</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a72a8a4cfd7027a1ade3f1065b21b8c7c"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a72a8a4cfd7027a1ade3f1065b21b8c7c">pd::client::ClientCore::login_</a></div><div class="ttdeci">QString login_</div><div class="ttdef"><b>Определения</b> clientcore.h:49</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a9089b0efa9d81c8848f29f095f2cefcb"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a9089b0efa9d81c8848f29f095f2cefcb">pd::client::ClientCore::nextId_</a></div><div class="ttdeci">int nextId_</div><div class="ttdef"><b>Определения</b> clientcore.h:51</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a9ba4c0f2305c49760288ce962c4df7af"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a9ba4c0f2305c49760288ce962c4df7af">pd::client::ClientCore::operator=</a></div><div class="ttdeci">ClientCore &amp; operator=(const ClientCore &amp;)=delete</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_a9cf8e9424cc16edd04097f7f7c5002b2"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#a9cf8e9424cc16edd04097f7f7c5002b2">pd::client::ClientCore::loginChanged</a></div><div class="ttdeci">void loginChanged()</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_aa3abb58ea1e6967c6cdfc11fb7e3bf0a"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#aa3abb58ea1e6967c6cdfc11fb7e3bf0a">pd::client::ClientCore::socketErrorString</a></div><div class="ttdeci">QString socketErrorString() const</div><div class="ttdoc">Последняя ошибка сокета после неудачного connectTo / обрыва.</div><div class="ttdef"><b>Определения</b> clientcore.h:28</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_aaef4b8ecf66093f52089a5717c4b0824"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#aaef4b8ecf66093f52089a5717c4b0824">pd::client::ClientCore::isAdmin</a></div><div class="ttdeci">bool isAdmin() const</div><div class="ttdef"><b>Определения</b> clientcore.h:36</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_aaf4cf47f4e4bba064367ff5bb5c9816c"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#aaf4cf47f4e4bba064367ff5bb5c9816c">pd::client::ClientCore::instance</a></div><div class="ttdeci">static ClientCore &amp; instance()</div><div class="ttdef"><b>Определения</b> clientcore.cpp:10</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_ac805eae6c763b500c568a080ab1bc1ee"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#ac805eae6c763b500c568a080ab1bc1ee">pd::client::ClientCore::login</a></div><div class="ttdeci">QString login() const</div><div class="ttdef"><b>Определения</b> clientcore.h:34</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_ac9346675cb12dcbb475ccfbd9ef5dad8"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#ac9346675cb12dcbb475ccfbd9ef5dad8">pd::client::ClientCore::role_</a></div><div class="ttdeci">QString role_</div><div class="ttdef"><b>Определения</b> clientcore.h:50</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_acaf842dd6a9874e818b29f42ee09c295"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#acaf842dd6a9874e818b29f42ee09c295">pd::client::ClientCore::sock_</a></div><div class="ttdeci">QTcpSocket sock_</div><div class="ttdef"><b>Определения</b> clientcore.h:48</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_ad3ab91514ddb082fbef71574ab09ddf0"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#ad3ab91514ddb082fbef71574ab09ddf0">pd::client::ClientCore::connectionLost</a></div><div class="ttdeci">void connectionLost()</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_adc6ffd6ee24ac78dd51199dda3ac94ed"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#adc6ffd6ee24ac78dd51199dda3ac94ed">pd::client::ClientCore::role</a></div><div class="ttdeci">QString role() const</div><div class="ttdef"><b>Определения</b> clientcore.h:35</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_ae304b2ee9b9350de4179036cadfc5b5b"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#ae304b2ee9b9350de4179036cadfc5b5b">pd::client::ClientCore::request</a></div><div class="ttdeci">QJsonObject request(const QJsonObject &amp;cmd, int timeoutMs=5000)</div><div class="ttdef"><b>Определения</b> clientcore.cpp:25</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_aea40e548714562bdf9ac3b4bd00c8ec4"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#aea40e548714562bdf9ac3b4bd00c8ec4">pd::client::ClientCore::registerUser</a></div><div class="ttdeci">bool registerUser(const QString &amp;user, const QString &amp;password, QString *err=nullptr)</div><div class="ttdef"><b>Определения</b> clientcore.cpp:53</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_af58c1c432b06dd0639da69b944eb5a13"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#af58c1c432b06dd0639da69b944eb5a13">pd::client::ClientCore::disconnectFromServer</a></div><div class="ttdeci">void disconnectFromServer()</div><div class="ttdef"><b>Определения</b> clientcore.cpp:22</div></div>
+<div class="ttc" id="aclasspd_1_1client_1_1_client_core_html_afdccd70b6e4501c64325dff1e30adb97"><div class="ttname"><a href="classpd_1_1client_1_1_client_core.html#afdccd70b6e4501c64325dff1e30adb97">pd::client::ClientCore::ClientCore</a></div><div class="ttdeci">ClientCore()</div><div class="ttdef"><b>Определения</b> clientcore.cpp:12</div></div>
+<div class="ttc" id="anamespacepd_1_1client_html"><div class="ttname"><a href="namespacepd_1_1client.html">pd::client</a></div><div class="ttdef"><b>Определения</b> clientcore.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a href="clientcore_8h.html">clientcore.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PD Crypto Suite: Класс CoreTests</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PD Crypto Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Vigenere + SHA-384 + Chord method + Steganography. Client/Server.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_core_tests.html','','class_core_tests-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс CoreTests</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:CoreTests:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_core_tests.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-slots" class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:a344c950398df0aa5f23992106bd592a2" id="r_a344c950398df0aa5f23992106bd592a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a344c950398df0aa5f23992106bd592a2">vigenereRoundtripLatin</a> ()</td></tr>
+<tr class="memitem:aa19128b2e6bf6d573ee65de36b3a9642" id="r_aa19128b2e6bf6d573ee65de36b3a9642"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa19128b2e6bf6d573ee65de36b3a9642">vigenereKnownVector</a> ()</td></tr>
+<tr class="memitem:a06191731658cf59d51148a32f80a0687" id="r_a06191731658cf59d51148a32f80a0687"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a06191731658cf59d51148a32f80a0687">vigenerePreservesNonLetters</a> ()</td></tr>
+<tr class="memitem:ab5b672b53bccd155734f401cfee00be2" id="r_ab5b672b53bccd155734f401cfee00be2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab5b672b53bccd155734f401cfee00be2">vigenereEmptyKey</a> ()</td></tr>
+<tr class="memitem:ae2ffcdaf41035349387bc33924008d97" id="r_ae2ffcdaf41035349387bc33924008d97"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2ffcdaf41035349387bc33924008d97">sha384EmptyVector</a> ()</td></tr>
+<tr class="memitem:aac1960c073c39a5f00067e7eee2244b0" id="r_aac1960c073c39a5f00067e7eee2244b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac1960c073c39a5f00067e7eee2244b0">sha384AbcVector</a> ()</td></tr>
+<tr class="memitem:adb97f8d7e8c96eb781d6f3d3a5cc51d1" id="r_adb97f8d7e8c96eb781d6f3d3a5cc51d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adb97f8d7e8c96eb781d6f3d3a5cc51d1">sha384DifferentInputsDiffer</a> ()</td></tr>
+<tr class="memitem:aa7ca748ff83db47ec1c6e0e78da9f0c8" id="r_aa7ca748ff83db47ec1c6e0e78da9f0c8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa7ca748ff83db47ec1c6e0e78da9f0c8">chordCubicRoot</a> ()</td></tr>
+<tr class="memitem:a517a4400f0dae50ff9d118981b7b09e3" id="r_a517a4400f0dae50ff9d118981b7b09e3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a517a4400f0dae50ff9d118981b7b09e3">chordSameSignThrows</a> ()</td></tr>
+<tr class="memitem:ad6827a0476e4494bff4f432f55391dc8" id="r_ad6827a0476e4494bff4f432f55391dc8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6827a0476e4494bff4f432f55391dc8">exprParserBasic</a> ()</td></tr>
+<tr class="memitem:a84c5258837ee42f36132ff8a7a8e927d" id="r_a84c5258837ee42f36132ff8a7a8e927d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a84c5258837ee42f36132ff8a7a8e927d">stegRoundtripAscii</a> ()</td></tr>
+<tr class="memitem:adeb94d3e8041ce024134a3de99a46f0b" id="r_adeb94d3e8041ce024134a3de99a46f0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adeb94d3e8041ce024134a3de99a46f0b">stegRoundtripUnicode</a> ()</td></tr>
+<tr class="memitem:ab8b91001c075818703bf47e80603017c" id="r_ab8b91001c075818703bf47e80603017c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab8b91001c075818703bf47e80603017c">stegOverflowFails</a> ()</td></tr>
+<tr class="memitem:a73716438ff9ea006fc1d06038ba2cce0" id="r_a73716438ff9ea006fc1d06038ba2cce0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73716438ff9ea006fc1d06038ba2cce0">stegCapacityMath</a> ()</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa7ca748ff83db47ec1c6e0e78da9f0c8" name="aa7ca748ff83db47ec1c6e0e78da9f0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ca748ff83db47ec1c6e0e78da9f0c8">&#9670;&#160;</a></span>chordCubicRoot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::chordCubicRoot </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a517a4400f0dae50ff9d118981b7b09e3" name="a517a4400f0dae50ff9d118981b7b09e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517a4400f0dae50ff9d118981b7b09e3">&#9670;&#160;</a></span>chordSameSignThrows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::chordSameSignThrows </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6827a0476e4494bff4f432f55391dc8" name="ad6827a0476e4494bff4f432f55391dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6827a0476e4494bff4f432f55391dc8">&#9670;&#160;</a></span>exprParserBasic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::exprParserBasic </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac1960c073c39a5f00067e7eee2244b0" name="aac1960c073c39a5f00067e7eee2244b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1960c073c39a5f00067e7eee2244b0">&#9670;&#160;</a></span>sha384AbcVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::sha384AbcVector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb97f8d7e8c96eb781d6f3d3a5cc51d1" name="adb97f8d7e8c96eb781d6f3d3a5cc51d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb97f8d7e8c96eb781d6f3d3a5cc51d1">&#9670;&#160;</a></span>sha384DifferentInputsDiffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::sha384DifferentInputsDiffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2ffcdaf41035349387bc33924008d97" name="ae2ffcdaf41035349387bc33924008d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ffcdaf41035349387bc33924008d97">&#9670;&#160;</a></span>sha384EmptyVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::sha384EmptyVector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73716438ff9ea006fc1d06038ba2cce0" name="a73716438ff9ea006fc1d06038ba2cce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73716438ff9ea006fc1d06038ba2cce0">&#9670;&#160;</a></span>stegCapacityMath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::stegCapacityMath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8b91001c075818703bf47e80603017c" name="ab8b91001c075818703bf47e80603017c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b91001c075818703bf47e80603017c">&#9670;&#160;</a></span>stegOverflowFails</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::stegOverflowFails </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84c5258837ee42f36132ff8a7a8e927d" name="a84c5258837ee42f36132ff8a7a8e927d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c5258837ee42f36132ff8a7a8e927d">&#9670;&#160;</a></span>stegRoundtripAscii</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::stegRoundtripAscii </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeb94d3e8041ce024134a3de99a46f0b" name="adeb94d3e8041ce024134a3de99a46f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb94d3e8041ce024134a3de99a46f0b">&#9670;&#160;</a></span>stegRoundtripUnicode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::stegRoundtripUnicode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5b672b53bccd155734f401cfee00be2" name="ab5b672b53bccd155734f401cfee00be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b672b53bccd155734f401cfee00be2">&#9670;&#160;</a></span>vigenereEmptyKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::vigenereEmptyKey </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa19128b2e6bf6d573ee65de36b3a9642" name="aa19128b2e6bf6d573ee65de36b3a9642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa19128b2e6bf6d573ee65de36b3a9642">&#9670;&#160;</a></span>vigenereKnownVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::vigenereKnownVector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06191731658cf59d51148a32f80a0687" name="a06191731658cf59d51148a32f80a0687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06191731658cf59d51148a32f80a0687">&#9670;&#160;</a></span>vigenerePreservesNonLetters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::vigenerePreservesNonLetters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a344c950398df0aa5f23992106bd592a2" name="a344c950398df0aa5f23992106bd592a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344c950398df0aa5f23992106bd592a2">&#9670;&#160;</a></span>vigenereRoundtripLatin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreTests::vigenereRoundtripLatin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>tests/<a class="el" href="test__core_8cpp.html">test_core.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_core_tests.html">CoreTests</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
