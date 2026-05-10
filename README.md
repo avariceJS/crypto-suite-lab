@@ -5,7 +5,7 @@
 уравнения, LSB-стеганография — внедрение сообщения в картинку), с авторизацией,
 ролями (user/admin), БД (SQLite, синглтон), несколькими клиентами и Docker-инфраструктурой.
 
-![architecture](docs/uml/architecture.png)
+![architecture](docs/uml/architecture.svg)
 
 ## Возможности
 
@@ -60,8 +60,8 @@ pd/
 Склонируйте репозиторий и перейдите в каталог проекта:
 
 ```bash
-git clone https://github.com/<ваш-аккаунт>/<имя-репозитория>.git
-cd <имя-репозитория>
+git clone https://github.com/avariceJS/crypto-suite-lab.git
+cd crypto-suite-lab
 ```
 
 ### macOS (Homebrew)
@@ -158,9 +158,45 @@ ctest --test-dir build/tests --output-on-failure
 ## Документация
 
 - **Doxygen**: `doxygen Doxyfile` → `docs/doxygen/html/index.html`
-- **Wiki**: см. `docs/wiki/Home.md`
+- **Wiki (исходники в репозитории)**: каталог `docs/wiki/` (`Home.md` и остальные страницы)
 - **Требования**: `docs/requirements.md`
 - **UML**: `docs/uml/`
+
+### Как выложить эту Wiki на вкладку GitHub «Wiki»
+
+Файлы из `docs/wiki/` **не появляются на сайте сами по себе**: у репозитория есть **отдельный git-репозиторий Wiki** (`…git` с суффиксом `.wiki`).
+
+1. На GitHub откройте **Wiki** → **Create the first page**, сохраните любую черновую главную страницу (или минимальный текст) — так включается Wiki и создаётся репозиторий для неё.
+2. На своём компьютере:
+
+   ```bash
+   cd ~/Desktop   # или любой удобный каталог
+   git clone https://github.com/avariceJS/crypto-suite-lab.wiki.git
+   cd crypto-suite-lab.wiki
+   ```
+
+3. Скопируйте в эту папку все файлы из основного проекта `docs/wiki/` (если проект уже клонирован рядом):
+
+   ```bash
+   cp ../crypto-suite-lab/docs/wiki/*.md .
+   ```
+
+   Либо укажите полный путь к каталогу `docs/wiki/` на вашей машине.
+
+4. Проверьте ссылки в `Home.md`: на GitHub Wiki обычно используют вид **`[Архитектура](Architecture)`** без суффикса `.md` (страница называется как файл `Architecture.md`).
+5. Картинки: путь вида `../uml/architecture.png` в Wiki-репозитории **не сработает**. Замените на абсолютную ссылку на файл в основном репозитории, например:
+
+   `https://raw.githubusercontent.com/avariceJS/crypto-suite-lab/main/docs/uml/architecture.svg`
+
+6. Зафиксируйте и отправьте:
+
+   ```bash
+   git add .
+   git commit -m "Import wiki pages from docs/wiki"
+   git push
+   ```
+
+После `git push` страницы появятся на вкладке **Wiki**. Имеет смысл по-прежнему хранить копии в `docs/wiki/` в основном репозитории — это версионирование вместе с кодом; при изменениях повторяйте копирование или работайте сразу в клоне `.wiki.git` и переносите правки обратно при желании.
 
 ## Лицензия
 

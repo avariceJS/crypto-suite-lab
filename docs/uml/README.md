@@ -8,6 +8,8 @@ plantuml docs/uml/*.puml
 
 или онлайн: https://www.plantuml.com/plantuml/uml/
 
+Готовая иллюстрация для Wiki/README (без генератора): **[`architecture.svg`](architecture.svg)**.
+
 | Файл | Содержание |
 |------|------------|
 | [`architecture.puml`](architecture.puml) | Компонентно-развёрточная диаграмма |
